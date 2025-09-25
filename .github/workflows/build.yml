@@ -37,7 +37,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=${{ vars.COMPONENT_KEY }} -Dsonar.projectName='JavaCoffeeShop'
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=${{ vars.COMPONENT_KEY }} -Dsonar.organization='e-corp-cloud' -Dsonar.projectName='JavaCoffeeShop'
   security-report:
     runs-on: ubuntu-latest
     needs: build
