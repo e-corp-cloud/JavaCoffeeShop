@@ -8,7 +8,7 @@ if [ -z "$CURRENT_BRANCH" ]; then
 fi
 
 mvn clean verify sonar:sonar \
-  -Dsonar.projectKey=e-corp-demo_JavaCoffeeShop_9f714693-bd2c-4c91-af82-9fc65311d0e0 \
+  -Dsonar.projectKey=e-corp-cloud_JavaCoffeeShop \
   -Dsonar.projectName='JavaCoffeeShop' \
-  -Dsonar.host.url=https://mathiasconradt.ngrok.io \
+  -Dsonar.host.url=https://sonarcloud.io \
   -Dsonar.branch.name=$CURRENT_BRANCH
