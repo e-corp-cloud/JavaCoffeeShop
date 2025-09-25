@@ -41,7 +41,7 @@ jobs:
   security-report:
     runs-on: ubuntu-latest
     needs: build
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' && vars.SONAR_HOST_URL != 'https://sonarcloud.io'
 
     steps:
       - name: Checkout repository
